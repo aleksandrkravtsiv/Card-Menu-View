@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Card_Menu" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Menu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i9I-VH-pON">
+                                <rect key="frame" x="165" y="54" width="84" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xaq-kN-mt0" customClass="CardMenuView" customModule="Card_Menu" customModuleProvider="target">
+                                <rect key="frame" x="10" y="105" width="394" height="757"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fIE-2m-Fgh">
+                                <rect key="frame" x="355" y="54" width="51" height="31"/>
+                                <color key="onTintColor" red="0.77647058823529413" green="0.52549019607843139" blue="0.25882352941176467" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="didChangeMenuType:" destination="BYZ-38-t0r" eventType="valueChanged" id="ZXm-w0-cnl"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="fIE-2m-Fgh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="J3F-TF-3qc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fIE-2m-Fgh" secondAttribute="trailing" constant="10" id="OfK-Dn-vMQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xaq-kN-mt0" secondAttribute="trailing" constant="10" id="PXj-Hf-g0x"/>
+                            <constraint firstItem="Xaq-kN-mt0" firstAttribute="top" secondItem="i9I-VH-pON" secondAttribute="bottom" constant="30" id="T7P-bD-drY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Xaq-kN-mt0" secondAttribute="bottom" id="Xip-42-ZYG"/>
+                            <constraint firstItem="i9I-VH-pON" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="ejh-V5-TdE"/>
+                            <constraint firstItem="Xaq-kN-mt0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="r8e-GG-b24"/>
+                            <constraint firstItem="i9I-VH-pON" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yoN-ek-hTE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="cardMenu" destination="Xaq-kN-mt0" id="NAm-Ue-7xA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="127"/>
+        </scene>
+    </scenes>
+</document>
